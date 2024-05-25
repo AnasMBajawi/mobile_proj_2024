@@ -23,12 +23,33 @@ class BudgetDetailScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFF0A2E36),
       appBar: AppBar(
-        title: const Text('Hello user',
-            style: TextStyle(
-                color: Color(0xFFFFFFFF),
-                fontSize: 20,
-                fontWeight: FontWeight.bold)),
         backgroundColor: const Color(0xFF27FB6B),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const Text(
+              'Hello user',
+              style: TextStyle(
+                  color: Color(0xFFFFFFFF),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // Add sign-out functionality here
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFF0A2E36), // Button color like body background
+              ),
+              child: const Text(
+                'Sign Out',
+                style: TextStyle(
+                  color: Color(0xFFFFFFFF),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
       body: Column(
         children: [
@@ -48,7 +69,7 @@ class BudgetDetailScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 8),
                 Text(
-                  '3 ticktes',
+                  '3 tickets',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
@@ -124,7 +145,8 @@ class BudgetDetailScreen extends StatelessWidget {
                             backgroundColor: const Color(0xFF27FB6B), // Text color
                             padding:
                                 const EdgeInsets.symmetric(horizontal: 16.0),
-                            textStyle: const TextStyle(fontSize: 14, fontWeight:FontWeight.bold),
+                            textStyle: const TextStyle(
+                                fontSize: 14, fontWeight: FontWeight.bold),
                           ),
                           child: const Text('Pay'),
                         ),
@@ -140,3 +162,4 @@ class BudgetDetailScreen extends StatelessWidget {
     );
   }
 }
+
