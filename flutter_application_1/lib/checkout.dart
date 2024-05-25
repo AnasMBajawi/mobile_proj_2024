@@ -25,7 +25,6 @@ class CheckoutScreen extends StatefulWidget {
 }
 
 class _CheckoutScreenState extends State<CheckoutScreen> {
-  bool _rememberCard = false;
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +53,10 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
               decoration: InputDecoration(
                 labelText: 'Credit Card Number',
                 labelStyle: TextStyle(color: Color(0xFFFFFFFF)),
-                suffixIcon: Icon(Icons.credit_card, color: Color(0xFFFFFFFF),),
+                suffixIcon: Icon(
+                  Icons.credit_card,
+                  color: Color(0xFFFFFFFF),
+                ),
                 border: OutlineInputBorder(),
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.white),
@@ -147,10 +149,9 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                       Text(
                         'Total Payment:',
                         style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFFFFFFFF)
-                        ),
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFFFFFFFF)),
                       ),
                       Text(
                         '',
@@ -161,7 +162,6 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                       ),
                     ],
                   ),
-
                   const SizedBox(height: 16),
                   ElevatedButton(
                     onPressed: () {
@@ -176,9 +176,15 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                     child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('Pay', style: TextStyle(color: Color(0xFFFFFFFF)),),
+                        Text(
+                          'Pay',
+                          style: TextStyle(color: Color(0xFFFFFFFF)),
+                        ),
                         SizedBox(width: 8),
-                        Icon(Icons.arrow_forward, color: Color(0xFFFFFFFF),),
+                        Icon(
+                          Icons.arrow_forward,
+                          color: Color(0xFFFFFFFF),
+                        ),
                       ],
                     ),
                   ),
